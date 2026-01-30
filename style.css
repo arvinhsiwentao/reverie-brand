@@ -807,3 +807,237 @@ em {
         flex-basis: 100%;
     }
 }
+
+/* Product Collection Styles */
+.collection-section {
+    padding: 6rem 2rem;
+    background: var(--cream);
+}
+
+.collection-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    color: var(--brown);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(139, 115, 85, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(139, 115, 85, 0.15);
+}
+
+.product-featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+@media (max-width: 768px) {
+    .product-featured {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--rose);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    z-index: 10;
+}
+
+.badge-soon {
+    background: var(--sage);
+}
+
+.product-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-image-placeholder {
+    background: linear-gradient(135deg, var(--cream) 0%, #f5f0e8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-content {
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 3rem;
+    color: var(--rose);
+    opacity: 0.5;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-featured .product-info {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--brown);
+    margin-bottom: 0.25rem;
+}
+
+.product-featured .product-title {
+    font-size: 2rem;
+}
+
+.product-subtitle {
+    font-family: var(--font-body);
+    color: var(--rose);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    font-family: var(--font-body);
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.product-features li {
+    font-family: var(--font-body);
+    color: var(--brown);
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--cream);
+}
+
+.product-price {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--brown);
+    font-weight: 600;
+}
+
+/* Details Section */
+.details-section {
+    padding: 6rem 2rem;
+    background: white;
+}
+
+.details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .details-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detail-item h4 {
+    font-family: var(--font-display);
+    color: var(--brown);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-item p {
+    font-family: var(--font-body);
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.details-image {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.details-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Newsletter improvements */
+.newsletter-note {
+    font-family: var(--font-display);
+    color: var(--rose);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
